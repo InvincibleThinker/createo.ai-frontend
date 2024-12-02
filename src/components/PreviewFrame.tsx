@@ -22,7 +22,6 @@ export function PreviewFrame({ files, webContainer }: PreviewFrameProps) {
     );
 
     await webContainer.spawn("npm", ["run", "dev"]);
-    await webContainer.spawn("npm", ["run", "start-dev"]);
 
     // Wait for `server-ready` event
     webContainer.on("server-ready", (port, url) => {
